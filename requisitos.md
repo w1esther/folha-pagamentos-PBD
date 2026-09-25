@@ -103,13 +103,13 @@ O banco de dados deve possibilitar consultas relacionadas a diferentes aspectos 
 
 ### Folhas de pagamento
 
-* Folha de determinado período;
+* Folha de determinado período (mensal, trimestral, semestral, anual);
 * Folha de um funcionário específico;
+* Folha por setor/cargo;
 * Total de proventos;
 * Total de descontos;
 * Total de encargos;
-* Valor líquido;
-* Valores consolidados da empresa.
+* Valor líquido recebido pelos funcionários;
 
 ---
 
@@ -160,43 +160,6 @@ Alguns exemplos:
 * Horas extras associadas ao funcionário ou período errado;
 * Férias registradas em período diferente daquele em que ocorreram;
 * Valores finais incompatíveis com os proventos e descontos registrados.
-
----
-
-## 🏢 Visão geral
-
-O sistema pode ser entendido a partir de quatro grandes grupos de informações:
-
-```text
-                 ┌─────────────────────┐
-                 │     FUNCIONÁRIOS    │
-                 └──────────┬──────────┘
-                            │
-             ┌──────────────┼──────────────┐
-             │              │              │
-             ▼              ▼              ▼
-        ┌─────────┐    ┌─────────┐   ┌─────────────┐
-        │  CARGOS │    │ SETORES │   │  HISTÓRICO  │
-        └─────────┘    └─────────┘   └──────┬──────┘
-                                             │
-                                             ▼
-                                    ┌─────────────────┐
-                                    │   OCORRÊNCIAS   │
-                                    │  DO FUNCIONÁRIO │
-                                    └────────┬────────┘
-                                             │
-                                             ▼
-                                    ┌─────────────────┐
-                                    │     FOLHA DE    │
-                                    │    PAGAMENTO    │
-                                    └────────┬────────┘
-                                             │
-                              ┌──────────────┼──────────────┐
-                              ▼              ▼              ▼
-                         ┌─────────┐   ┌──────────┐   ┌──────────┐
-                         │PROVENTOS│   │ DESCONTOS│   │ ENCARGOS │
-                         └─────────┘   └──────────┘   └──────────┘
-```
 
 ---
 
